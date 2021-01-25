@@ -8,8 +8,8 @@ var aspect = 640/480
   const constraints = {
     audio: false,
     video: {
-      facingMode: "environment",
-     // facingMode: "user",
+    //  facingMode: "environment",
+      facingMode: "user",
       width: { ideal : 640},
       height: {ideal : 480},
        aspectRatio : { ideal : aspect}
