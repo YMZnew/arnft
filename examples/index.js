@@ -3,13 +3,15 @@ let targetCanvas;
 
 async function initCamera() {
 
+
   const constraints = {
     audio: false,
     video: {
       facingMode: "environment",
      // facingMode: "user",
-      width: 640,
-      height: 480
+      width: { ideal : 640},
+      height: {ideal : 480},
+       aspectRatio : { ideal : 1}
       //frameRate: { max: config.video.fps }
     }
   };
