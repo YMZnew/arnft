@@ -10,9 +10,9 @@ var aspect = 640/480
     video: {
     //  facingMode: "environment",
       facingMode: "user",
-      width: { ideal : 640},
-      height: {ideal : 480},
-       aspectRatio : { ideal : aspect}
+      width: 640,
+      height: 480
+       //aspectRatio : { ideal : aspect}
       //frameRate: { max: config.video.fps }
     }
   };
