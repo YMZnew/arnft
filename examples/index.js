@@ -6,8 +6,8 @@ async function initCamera() {
   const constraints = {
     audio: false,
     video: {
-      //facingMode: "environment",
-      facingMode: "user",
+      facingMode: "environment",
+     // facingMode: "user",
       width: 640,
       height: 480
       //frameRate: { max: config.video.fps }
