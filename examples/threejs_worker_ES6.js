@@ -62,7 +62,7 @@ var iy = 80
 var iz = 80
 var iscale =80
 
-
+try{
 //var addModel = function (url, x, y, z, scale) {
  //const root = this.root 
 let model /* Load Model */ 
@@ -76,6 +76,9 @@ model.rotation.x = Math.PI / 2
  model . position . z = iz
  root.add(model) }) 
 //}
+}catch(e){
+ alert(e)
+}
 
 
   var load = function () {
