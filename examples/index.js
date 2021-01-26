@@ -9,7 +9,7 @@ var aspect = 640/480
     audio: false,
     video: {
       facingMode: "environment",
-      facingMode: "user",
+      //facingMode: "user",
       width: 640,
       height: 480
        aspectRatio : { ideal : aspect}
