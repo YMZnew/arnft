@@ -64,11 +64,12 @@ var iscale =80
 
 
 //var addModel = function (url, x, y, z, scale) {
- const root = this.root 
+ //const root = this.root 
 let model /* Load Model */ 
 const threeGLTFLoader = new GLTFLoader ( ) 
 threeGLTFLoader.load(iurl, gltf => { 
-model = gltf.scene model.scale.set(iscale, iscale, iscale) 
+model = gltf.scene
+model.scale.set(iscale, iscale, iscale)
 model.rotation.x = Math.PI / 2
  model.position.x = ix
  model . position . y = iy
