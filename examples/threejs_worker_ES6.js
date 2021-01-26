@@ -56,7 +56,7 @@ function start(markerUrl, video, input_width, input_height, render_update, track
   root.add(sphere);
 */
 
-var iurl = './Data/models/Duck/glTF/Duck.glb'
+var iurl = './Data/Duck.glb'
 var ix = 40
 var iy = 80
 var iz = 80
