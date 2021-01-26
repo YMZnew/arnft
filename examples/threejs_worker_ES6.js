@@ -38,15 +38,15 @@ function start(markerUrl, video, input_width, input_height, render_update, track
 
   scene.add(camera);
 
-  var sphere = new THREE.Mesh(
+  /*var sphere = new THREE.Mesh(
     new THREE.SphereGeometry(0.5, 8, 8),
     new THREE.MeshNormalMaterial()
-  );
+  );*/
 
   var root = new THREE.Object3D();
   scene.add(root);
 
-  sphere.material.flatShading;
+ /* sphere.material.flatShading;
   sphere.position.z = 0;
   sphere.position.x = 100;
   sphere.position.y = 100;
@@ -54,6 +54,28 @@ function start(markerUrl, video, input_width, input_height, render_update, track
 
   root.matrixAutoUpdate = false;
   root.add(sphere);
+*/
+
+var iurl = './Data/models/Duck/glTF/Duck.glb'
+var ix = 40
+var iy = 80
+var iz = 80
+var iscale =80
+
+
+//var addModel = function (url, x, y, z, scale) {
+ const root = this.root 
+let model /* Load Model */ 
+const threeGLTFLoader = new GLTFLoader ( ) 
+threeGLTFLoader.load(iurl, gltf => { 
+model = gltf.scene model.scale.set(iscale, iscale, iscale) 
+model.rotation.x = Math.PI / 2
+ model.position.x = ix
+ model . position . y = iy
+ model . position . z = iz
+ root.add(model) }) 
+//}
+
 
   var load = function () {
     vw = input_width;
@@ -148,9 +170,9 @@ function start(markerUrl, video, input_width, input_height, render_update, track
     lasttime = now;
 
     if (!world) {
-      sphere.visible = false;
+      model.visible = false;
     } else {
-      sphere.visible = true;
+      model.visible = true;
       // set matrix of 'root' by detected 'world' matrix
       setMatrix(root.matrix, world);
     }
