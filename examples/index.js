@@ -8,11 +8,11 @@ var aspect = 640/480
   const constraints = {
     audio: false,
     video: {
-      facingMode: "environment",
-      //facingMode: "user",
+     // facingMode: "environment",
+      facingMode: "user",
       width: 640,
       height: 480
-       aspectRatio : { ideal : aspect}
+     //  aspectRatio : { ideal : aspect}
       //frameRate: { max: config.video.fps }
     }
   };
