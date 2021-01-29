@@ -1,5 +1,8 @@
+try{
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' 
-
+}catch(e){
+ alert(e) 
+}
 
 function isMobile () {
   return /Android|mobile|iPad|iPhone/i.test(navigator.userAgent);
