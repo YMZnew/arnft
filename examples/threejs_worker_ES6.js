@@ -3434,15 +3434,41 @@ function start(markerUrl, video, input_width, input_height, render_update, track
   var root = new THREE.Object3D();
   scene.add(root);
 
-  sphere.material.flatShading;
-  sphere.position.z = 0;
-  sphere.position.x = 100;
-  sphere.position.y = 100;
-  sphere.scale.set(200, 200, 200);
+//   sphere.material.flatShading;
+//   sphere.position.z = 0;
+//   sphere.position.x = 100;
+//   sphere.position.y = 100;
+//   sphere.scale.set(200, 200, 200);
 
-  root.matrixAutoUpdate = false;
-  root.add(sphere);
+//   root.matrixAutoUpdate = false;
+//   root.add(sphere);
 
+	var iurl = './Data/Duck.glb'
+var ix = 40
+var iy = 80
+var iz = 80
+var iscale =80
+
+try{
+//var addModel = function (url, x, y, z, scale) {
+ //const root = this.root 
+let model /* Load Model */ 
+const threeGLTFLoader = new GLTFLoader ( ) 
+threeGLTFLoader.load(iurl, gltf => { 
+model = gltf.scene
+model.scale.set(iscale, iscale, iscale)
+model.rotation.x = Math.PI / 2
+ model.position.x = ix
+ model . position . y = iy
+ model . position . z = iz
+ root.add(model) }) 
+//}
+}catch(e){
+ alert(e)
+}
+	
+	
+	
   var load = function () {
     vw = input_width;
     vh = input_height;
