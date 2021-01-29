@@ -3426,10 +3426,10 @@ function start(markerUrl, video, input_width, input_height, render_update, track
 
   scene.add(camera);
 
-  var sphere = new THREE.Mesh(
-    new THREE.SphereGeometry(0.5, 8, 8),
-    new THREE.MeshNormalMaterial()
-  );
+//   var sphere = new THREE.Mesh(
+//     new THREE.SphereGeometry(0.5, 8, 8),
+//     new THREE.MeshNormalMaterial()
+//   );
 
   var root = new THREE.Object3D();
   scene.add(root);
@@ -3453,7 +3453,7 @@ try{
 //var addModel = function (url, x, y, z, scale) {
  //const root = this.root 
 let model /* Load Model */ 
-const threeGLTFLoader = new GLTFLoader ( ) 
+const threeGLTFLoader = new THREE.GLTFLoader ( ) 
 threeGLTFLoader.load(iurl, gltf => { 
 model = gltf.scene
 model.scale.set(iscale, iscale, iscale)
@@ -3562,9 +3562,11 @@ model.rotation.x = Math.PI / 2
     lasttime = now;
 
     if (!world) {
-      sphere.visible = false;
+//       sphere.visible = false;
+      model.visible = false;
     } else {
-      sphere.visible = true;
+//       sphere.visible = true;
+	    model.visible = true;
       // set matrix of 'root' by detected 'world' matrix
       setMatrix(root.matrix, world);
     }
