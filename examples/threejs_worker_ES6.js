@@ -3419,12 +3419,12 @@ function start(markerUrl, video, input_width, input_height, render_update, track
   var renderer = new THREE.WebGLRenderer({ canvas: targetCanvas, alpha: true, antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
 
-  var scene = new THREE.Scene();
+//   var scene = new THREE.Scene();
 
-  var camera = new THREE.Camera();
-  camera.matrixAutoUpdate = false;
+//   var camera = new THREE.Camera();
+//   camera.matrixAutoUpdate = false;
 
-  scene.add(camera);
+//   scene.add(camera);
 
 //   var sphere = new THREE.Mesh(
 //     new THREE.SphereGeometry(0.5, 8, 8),
@@ -3432,7 +3432,7 @@ function start(markerUrl, video, input_width, input_height, render_update, track
 //   );
 
   var root = new THREE.Object3D();
-  scene.add(root);
+//   scene.add(root);
 
 //   sphere.material.flatShading;
 //   sphere.position.z = 0;
@@ -3570,7 +3570,7 @@ model.rotation.x = Math.PI / 2
       // set matrix of 'root' by detected 'world' matrix
       setMatrix(root.matrix, world);
     }
-    renderer.render(scene, camera);
+//     renderer.render(scene, camera);
   };
 
   var process = function () {
