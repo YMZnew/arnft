@@ -3416,8 +3416,8 @@ function start(markerUrl, video, input_width, input_height, render_update, track
   var context_process = canvas_process.getContext('2d');
   var targetCanvas = document.querySelector("#canvas");
 
-  var renderer = new THREE.WebGLRenderer({ canvas: targetCanvas, alpha: true, antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
+//   var renderer = new THREE.WebGLRenderer({ canvas: targetCanvas, alpha: true, antialias: true });
+//   renderer.setPixelRatio(window.devicePixelRatio);
 
 //   var scene = new THREE.Scene();
 
@@ -3490,7 +3490,7 @@ model.rotation.x = Math.PI / 2
     canvas_process.width = pw;
     canvas_process.height = ph;
 
-    renderer.setSize(sw, sh);
+//     renderer.setSize(sw, sh);
 
     worker = new Worker('../js/artoolkitNFT_ES6.worker.js')
 
